@@ -1,0 +1,79 @@
+analysis,state,item,value_pct
+1_digital,Kaduna,Mobile phone,24.34
+1_digital,Kano,Mobile phone,16.13
+1_digital,Katsina,Mobile phone,12.77
+1_digital,All states,Mobile phone,17.03
+1_digital,Kaduna,Internet (ever),39.42
+1_digital,Kano,Internet (ever),22.84
+1_digital,Katsina,Internet (ever),16.14
+1_digital,All states,Internet (ever),24.69
+1_digital,Kaduna,Online search,34.04
+1_digital,Kano,Online search,19.0
+1_digital,Katsina,Online search,11.18
+1_digital,All states,Online search,19.97
+1_digital,Kaduna,Initiated a digital transaction,8.64
+1_digital,Kano,Initiated a digital transaction,5.25
+1_digital,Katsina,Initiated a digital transaction,7.32
+1_digital,All states,Initiated a digital transaction,7.03
+1_digital,Kaduna,Smartphone,8.82
+1_digital,Kano,Smartphone,5.82
+1_digital,Katsina,Smartphone,4.1
+1_digital,All states,Smartphone,5.95
+1_digital,Kaduna,Shopped online,7.32
+1_digital,Kano,Shopped online,3.64
+1_digital,Katsina,Shopped online,5.95
+1_digital,All states,Shopped online,5.59
+1_digital,Kaduna,Online banking,5.42
+1_digital,Kano,Online banking,2.57
+1_digital,Katsina,Online banking,4.3
+1_digital,All states,Online banking,4.06
+1_digital,Kaduna,Computer,1.19
+1_digital,Kano,Computer,0.57
+1_digital,Katsina,Computer,0.39
+1_digital,All states,Computer,0.67
+1_digital,Kaduna,Tablet,1.06
+1_digital,Kano,Tablet,0.34
+1_digital,Katsina,Tablet,0.33
+1_digital,All states,Tablet,0.54
+2_aspiration,Kaduna,None,0.05
+2_aspiration,Kaduna,Primary,0.18
+2_aspiration,Kaduna,Junior secondary,0.14
+2_aspiration,Kaduna,Senior secondary (SS3),0.55
+2_aspiration,Kaduna,Vocational/TVET,2.94
+2_aspiration,Kaduna,Diploma/NCE,13.1
+2_aspiration,Kaduna,Bachelor's degree,51.1
+2_aspiration,Kaduna,Master's,17.88
+2_aspiration,Kaduna,Doctorate,4.27
+2_aspiration,Kaduna,Other/Don't know,9.79
+2_aspiration,Kano,None,0.08
+2_aspiration,Kano,Primary,0.04
+2_aspiration,Kano,Junior secondary,0.16
+2_aspiration,Kano,Senior secondary (SS3),2.75
+2_aspiration,Kano,Vocational/TVET,1.32
+2_aspiration,Kano,Diploma/NCE,39.99
+2_aspiration,Kano,Bachelor's degree,32.62
+2_aspiration,Kano,Master's,8.29
+2_aspiration,Kano,Doctorate,1.24
+2_aspiration,Kano,Other/Don't know,13.52
+2_aspiration,Katsina,None,0.46
+2_aspiration,Katsina,Primary,0.0
+2_aspiration,Katsina,Junior secondary,0.28
+2_aspiration,Katsina,Senior secondary (SS3),4.89
+2_aspiration,Katsina,Vocational/TVET,1.07
+2_aspiration,Katsina,Diploma/NCE,41.88
+2_aspiration,Katsina,Bachelor's degree,25.54
+2_aspiration,Katsina,Master's,4.53
+2_aspiration,Katsina,Doctorate,1.87
+2_aspiration,Katsina,Other/Don't know,19.49
+3_skip_by_state,Kaduna,Any meal skipped (past 7 days),21.72
+3_skip_by_state,Kano,Any meal skipped (past 7 days),12.63
+3_skip_by_state,Katsina,Any meal skipped (past 7 days),26.94
+3_skip_by_member,All,Adult men,55.04
+3_skip_by_member,All,Adult women,48.18
+3_skip_by_member,All,Boys (children),13.52
+3_skip_by_member,All,Girls (children),9.55
+4_infra,All,Sufficient classroom seats,25.56
+4_infra,All,Separate toilets for girls,81.15
+4_infra,All,Drinking water available,92.22
+4_infra,All,Classroom blackboards present,92.22
+4_infra,All,Any toilet available,95.19
