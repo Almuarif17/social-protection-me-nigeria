@@ -1,0 +1,1 @@
+Independent M&E review of Nigeria's Adolescent Girls Initiative for Learning and Empowerment, drawing on the World Bank's anonymised baseline survey (NGA_2023_AGILE-IE_v01_M, n=8,223 girls / 8,007 caregivers / 270 schools). Reproducible analysis. Published [date] at [LinkedIn URL]."
