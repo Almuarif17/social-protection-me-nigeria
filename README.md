@@ -55,16 +55,26 @@ This repository does **not** redistribute restricted-use datasets. The World Ban
 
 ## How to navigate
 social-protection-me-nigeria/
+
 ├── README.md ← you are here
+
 ├── brief_01_NASSP_HUP/
-│ ├── README.md
-│ └── Independent_ME_Review.pdf
+
+  │ ├── README.md
+
+  │ └── Independent_ME_Review.pdf
+
 └── brief_02_AGILE/
-├── README.md
-├── AGILE_Independent_ME_Review.pdf
-├── AGILE_Brief2_Analysis.ipynb
-├── key_findings_numbers.csv
-└── (chart PNGs)
+
+  ├── README.md
+
+  ├── AGILE_Independent_ME_Review.pdf
+
+  ├── AGILE_Brief2_Analysis.ipynb
+
+  ├── key_findings_numbers.csv
+
+  └── (chart PNGs)
 
 
 ---
