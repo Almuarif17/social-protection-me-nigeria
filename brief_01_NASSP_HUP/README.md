@@ -24,7 +24,7 @@ This brief examines the programme through five lenses:
 
 ## How to read this brief
 
-- 📄 **[Independent_ME_Review.pdf](./Independent_ME_Review.pdf)** — the full brief (~10 pages)
+- 📄 **[Independent_ME_Review.pdf](./brief_01_NASSP_HUP_Independent_M&E_Review.pdf)** — the full brief (~10 pages)
 - 🔗 **[LinkedIn article version](https://www.linkedin.com/pulse/nigerias-nassp-hup-crossroads-independent-monitoring-evaluation-7vnee)** — published 13 June 2026
 
 ---
