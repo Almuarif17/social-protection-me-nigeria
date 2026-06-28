@@ -1,0 +1,11 @@
+year,food_cpi_yoy_pct,cumulative_deflator,real_value_of_70_naira,source_note
+2016,14.5,1,70,NBS Food CPI – base year
+2017,19.5,1.195,58.58,NBS 2017 annual food inflation
+2018,14.1,1.364,51.32,NBS 2018
+2019,13.5,1.548,45.22,NBS 2019
+2020,16,1.795,39,NBS 2020 (COVID year)
+2021,20.4,2.161,32.39,NBS 2021
+2022,21.3,2.622,26.7,NBS 2022
+2023,28,3.356,20.86,NBS 2023 (post-subsidy spike)
+2024,38,4.631,15.12,NBS 2024 (record high)
+2025,32,6.114,11.45,NBS 2025 (still elevated)

@@ -1,0 +1,6 @@
+component,naira_per_meal,category,source_row
+Food (main meal),40,Food,S7
+Egg,14,Food,S7
+Cook stipend,10,Overhead,S7
+Micronutrient supplement,5,Food,S7
+Quality assurance,1,Overhead,S7
