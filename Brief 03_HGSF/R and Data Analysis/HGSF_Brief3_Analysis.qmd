@@ -1,0 +1,245 @@
+---
+title: "Feeding the Bet — HGSF Brief 3 Analysis"
+author: "Usman Almuarif Mashood"
+date: today
+format:
+  html:
+    toc: true
+    embed-resources: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+# Setup
+
+```{r}
+#| label: setup
+
+library(tidyverse)
+library(scales)
+library(janitor)
+library(here)
+
+# House style — navy + gold to match the brief covers
+theme_brief <- function() {
+  theme_minimal(base_size = 12) +
+    theme(
+      plot.title = element_text(face = "bold", size = 14, colour = "#0a2342"),
+      plot.subtitle = element_text(size = 11, colour = "grey30"),
+      plot.caption = element_text(size = 9, colour = "grey50", hjust = 0),
+      axis.title = element_text(colour = "grey30"),
+      panel.grid.minor = element_blank()
+    )
+}
+
+navy <- "#0a2342"
+gold <- "#c9a227"
+```
+
+# Chart 1 — Federal allocation to HGSF, 2016–2024
+
+```{r}
+#| label: chart-01-budget
+#| fig-cap: "Annual federal allocation to NHGSFP, ₦ billion, 2016–2024. Source: BudgIT Open Budget Portal; programme suspended January 2024."
+#| fig-width: 9
+#| fig-height: 5
+
+budget <- read_csv(here("data", "hgsf_budget_series.csv"))
+
+p1 <- budget |>
+  filter(!is.na(allocation_naira_bn)) |>
+  ggplot(aes(x = factor(year), y = allocation_naira_bn)) +
+  geom_col(fill = navy, width = 0.7) +
+  geom_text(aes(label = ifelse(allocation_naira_bn == 0, "Suspended",
+                               scales::comma(allocation_naira_bn, accuracy = 0.1))),
+            vjust = -0.5, size = 3.5, colour = "grey20") +
+  scale_y_continuous(labels = scales::comma, expand = expansion(mult = c(0, 0.15))) +
+  labs(
+    title = "Nigeria's school-feeding budget: a decade of volatility",
+    subtitle = "Federal allocation to NHGSFP, ₦ billion, 2016–2024",
+    x = NULL,
+    y = "₦ billion",
+    caption = "Source: BudgIT Open Budget Portal. 2024 figure reflects January suspension by Presidential Panel."
+  ) +
+  theme_brief()
+
+p1
+
+# Create charts folder if it doesn't exist, then save
+dir.create(here("charts"), showWarnings = FALSE)
+ggsave(here("charts", "01_budget_trend.png"), p1,
+       width = 9, height = 5, dpi = 300, bg = "white")
+```
+
+# Chart 2 — Reach over time: peak, suspension, relaunch
+
+```{r}
+#| label: chart-02-reach
+#| fig-cap: "NHGSFP reach in millions of pupils, 2017–2025. The 2023 figure reflects the WFP School Meals Coalition database; the January 2024 Presidential Panel suspension stranded 9M+ pupils and 250,000 jobs (Guardian, S5). The 2025 figure is the Renewed Hope relaunch pilot across 12 states."
+#| fig-width: 9
+#| fig-height: 5
+
+reach <- read_csv(here("data", "hgsf_reach_claims.csv"))
+
+p2 <- reach |>
+  ggplot(aes(x = factor(year), y = pupils_millions)) +
+  geom_col(fill = navy, width = 0.7) +
+  geom_text(aes(label = ifelse(pupils_millions == 0, "Suspended",
+                               paste0(pupils_millions, "M"))),
+            vjust = -0.5, size = 3.8, colour = "grey20") +
+  geom_text(aes(label = source_label),
+            vjust = 1.4, size = 2.8, colour = "white",
+            data = ~ filter(.x, pupils_millions > 1)) +
+  scale_y_continuous(labels = scales::comma,
+                     expand = expansion(mult = c(0, 0.15))) +
+  labs(
+    title = "From peak to suspension to pilot relaunch",
+    subtitle = "Pupils reportedly fed under NHGSFP, millions, 2017–2025",
+    x = NULL,
+    y = "Pupils (millions)",
+    caption = "Sources: State House (S27), BusinessDay (S29), Vanguard (S7), WFP SMC (S5b), Guardian (S5, S28), Renewed Hope NHGSFP portal (S26)."
+  ) +
+  theme_brief()
+
+p2
+
+ggsave(here("charts", "02_reach_trend.png"), p2,
+       width = 9, height = 5, dpi = 300, bg = "white")
+```
+
+# Chart 3 — Where the ₦70 per meal actually goes
+
+```{r}
+#| label: chart-03-cost
+#| fig-cap: "Breakdown of the ₦70 nominal per-child-per-meal allocation. Per Vanguard (S7), only ₦59 of the ₦70 funds direct food items; the remaining ₦11 covers cook stipends and quality assurance. Onah & Onah (S4) recommend raising the rate to ₦150/child/meal."
+#| fig-width: 9
+#| fig-height: 5
+
+cost <- read_csv(here("data", "hgsf_cost_per_meal.csv"))
+
+# Order components from largest to smallest within each category
+cost <- cost |>
+  mutate(component = fct_reorder(component, naira_per_meal))
+
+p3 <- cost |>
+  ggplot(aes(x = naira_per_meal, y = component, fill = category)) +
+  geom_col(width = 0.7) +
+  geom_text(aes(label = paste0("₦", naira_per_meal)),
+            hjust = -0.2, size = 3.8, colour = "grey20") +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.18))) +
+  scale_fill_manual(values = c("Food" = navy, "Overhead" = gold)) +
+  labs(
+    title = "Of every ₦70, only ₦59 buys food",
+    subtitle = "Per-meal cost breakdown under NHGSFP (nominal, 2016–2023)",
+    x = "₦ per child per meal",
+    y = NULL,
+    fill = NULL,
+    caption = "Source: Vanguard (S7), per Federal Ministry of Humanitarian Affairs breakdown. Onah & Onah (2021, S4) recommend revising rate to ₦150/meal."
+  ) +
+  theme_brief() +
+  theme(legend.position = "top")
+
+p3
+
+ggsave(here("charts", "03_cost_per_meal.png"), p3,
+       width = 9, height = 5, dpi = 300, bg = "white")
+```
+
+# Chart 4 — Documented fraud vs. recovered funds
+
+```{r}
+#| label: chart-04-fraud
+#| fig-cap: "Documented fraud incidents (S8 ICPC, S9 Premium Times) compared with the December 2025 NSIPA recovery action (S33 Tribune). Log scale used because the ₦30bn recovery is three orders of magnitude larger than individual fraud cases — that order-of-magnitude gap is itself the finding."
+#| fig-width: 10
+#| fig-height: 5
+
+fraud <- read_csv(here("data", "hgsf_fraud_timeline.csv"))
+
+fraud <- fraud |>
+  filter(amount_naira_bn > 0) |>
+  mutate(event_date = factor(event_date, levels = unique(event_date)))
+
+p4 <- fraud |>
+  ggplot(aes(x = event_date, y = amount_naira_bn, fill = category)) +
+  geom_col(width = 0.7) +
+  geom_text(aes(label = ifelse(amount_naira_bn < 1,
+                               paste0("₦", round(amount_naira_bn * 1000), "m"),
+                               paste0("₦", amount_naira_bn, "bn"))),
+            vjust = -0.5, size = 3.2, colour = "grey20") +
+  scale_y_log10(
+    labels = scales::comma,
+    breaks = c(0.01, 0.1, 1, 10, 100),
+    expand = expansion(mult = c(0, 0.18))
+  ) +
+  scale_fill_manual(values = c(
+    "Documented fraud" = "#a83232",
+    "Allegation under investigation" = gold,
+    "Recovery action" = navy
+  )) +
+  labs(
+    title = "Three orders of magnitude separate documented fraud from recovered funds",
+    subtitle = "HGSF-linked fraud and recovery events, 2019–2025 (₦ billion, log scale)",
+    x = NULL,
+    y = "₦ billion (log scale)",
+    fill = NULL,
+    caption = "Sources: ICPC (S8), Premium Times (S9), Tribune (S33). January 2024 federal suspension noted in text, not on chart."
+  ) +
+  theme_brief() +
+  theme(
+    legend.position = "top",
+    axis.text.x = element_text(angle = 30, hjust = 1)
+  )
+
+p4
+
+ggsave(here("charts", "04_fraud_recovery.png"), p4,
+       width = 10, height = 5, dpi = 300, bg = "white")
+```
+
+# Chart 3 (NEW) — Real-terms value of ₦70/child/meal, 2016–2025
+
+```{r}
+#| label: chart-03-real-value
+#| fig-cap: "Real-terms value of the ₦70/child/meal NHGSFP unit cost, deflated by NBS Food CPI year-on-year inflation. By 2025, the nominal ₦70 retains the food-purchasing power of approximately ₦11–₦12 in 2016 terms — roughly one-sixth of its launch value."
+#| fig-width: 9
+#| fig-height: 5.5
+
+real <- read_csv(here("data", "hgsf_real_value_70naira.csv"))
+
+# Reference lines
+launch <- 70
+approved <- 100
+target_low <- 500
+target_high <- 1000
+
+p3b <- real |>
+  ggplot(aes(x = year, y = real_value_of_70_naira)) +
+  geom_hline(yintercept = launch, linetype = "dashed",
+             colour = "grey60", linewidth = 0.5) +
+  annotate("text", x = 2016.2, y = launch + 4,
+           label = "Nominal ₦70 (2016 launch rate, never increased)",
+           hjust = 0, size = 3.2, colour = "grey40") +
+  geom_line(colour = navy, linewidth = 1.4) +
+  geom_point(colour = navy, size = 2.8) +
+  geom_text(aes(label = paste0("₦", round(real_value_of_70_naira))),
+            vjust = -1.2, size = 3.3, colour = "grey20") +
+  scale_x_continuous(breaks = 2016:2025) +
+  scale_y_continuous(limits = c(0, 80),
+                     breaks = seq(0, 80, 20),
+                     labels = scales::label_dollar(prefix = "₦")) +
+  labs(
+    title = "₦70 in 2016 buys what ₦11 buys in 2025",
+    subtitle = "Real-terms value of the NHGSFP per-meal allocation, NBS Food CPI deflator",
+    x = NULL,
+    y = "Real value in 2016 ₦",
+    caption = "Source: NBS Consumer Price Index, Food sub-index (annual averages). Nominal rate held at ₦70/meal throughout 2016–2024; ₦100 approved in 2022 but never implemented; programme suspended Jan 2024. 2025 NSIPA stated target range ₦500–₦1,000 (Adebowale/GazetteNG, 2025)."
+  ) +
+  theme_brief()
+
+p3b
+
+ggsave(here("charts", "03b_real_value_70_deflated.png"), p3b,
+       width = 9, height = 5.5, dpi = 300, bg = "white")
+```
