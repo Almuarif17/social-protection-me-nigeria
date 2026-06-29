@@ -1,167 +1,106 @@
-# Brief 3 — Home Grown School Feeding Programme (HGSF) Independent M&E Review
+# Brief 3 — National Home-Grown School Feeding Programme (NHGSFP) · Independent M&E Review
 
-**An independent Monitoring & Evaluation review of Nigeria's Home Grown School Feeding Programme (HGSF), the country's flagship school meals initiative.**
+**An independent Monitoring & Evaluation review of Nigeria's National Home-Grown School Feeding Programme — Africa's largest school-feeding initiative.**
 
-Author: Usman Almuarif Mashood · Published June 2026
+Author: Usman Almuarif Mashood · Independent M&E Researcher · Published June 2026
 
 ---
 
 ## What this brief is
 
-The Home Grown School Feeding Programme (HGSF) is Nigeria's commitment to providing nutritious meals to schoolchildren across public primary schools. This independent M&E review examines the programme through multiple analytical lenses:
+The National Home-Grown School Feeding Programme (NHGSFP) is the Federal Government of Nigeria's commitment to providing one daily mid-day meal to pupils in Primary 1–3 across public primary schools nationwide. At its 2022 peak it claimed to feed nearly 10 million pupils across 53,000+ schools through 127,000 community cooks, at a fixed unit cost of ₦70 per child per meal.
 
-1. **What it committed to do** — the official objectives and Results Framework indicators
-2. **What the evidence shows** — performance against committed targets through programme data and independent evaluations
-3. **Where the M&E framework falls short** — gaps in the monitoring architecture and data availability
-4. **What the programme has achieved** — documented successes in reach, beneficiary outcomes, and implementation
-5. **What should be added to the Results Framework** — specific, operational indicator recommendations
+This brief is the independent M&E specification for a verification system that should already exist. It examines the programme through five analytical lenses:
+
+1. **What it committed to do** — the official five-pillar design and Results Framework architecture
+2. **What the evidence shows** — performance against committed targets through programme data, donor assessments, audit reports, and independent academic studies
+3. **Where the M&E framework falls short** — gaps in monitoring architecture and data availability
+4. **What the programme has genuinely achieved** — documented successes in reach, enrolment, employment, and smallholder agriculture
+5. **What should be added to the framework** — five operational, costed, time-bound recommendations
+
+The brief draws on **34 curated public sources** spanning official government portals, World Bank and UN assessments, legislative oversight reports, ICPC fraud investigations, peer-reviewed academic studies, civic-data platforms (BudgIT), and investigative journalism (Punch, Premium Times, Vanguard, Guardian Nigeria, Tribune Online, The Cable, BusinessDay). Where sources conflict, the contradiction is **named** rather than resolved.
 
 ---
 
 ## How to navigate this brief
 
-This folder is organized into three main sections for different types of users:
+This folder is organised into three sections for different types of reader.
 
-### 📊 **IMAGES** — Visualizations and Charts
-Contains 5 key visualization files showing:
-- Budget trends over time
-- Programme reach and beneficiary expansion
-- Cost per meal analysis
-- Real value (inflation-adjusted) cost trends
-- Fraud recovery and audit findings
+### 📚 [HGSF Reading and Summary](https://github.com/Almuarif17/social-protection-me-nigeria/tree/main/Brief%2003_HGSF/HGSF%20Reading%20and%20Summary) — Executive reports
 
-**[📖 View IMAGES documentation](./IMAGES/Image%20Note.md)**
+The narrative outputs, in three reader-targeted formats:
 
-### 📚 **HGSF Reading and Summary** — Executive Reports
-Contains two comprehensive evaluation documents:
-- **Evaluated_Home_Grown_School_Feeding_Programme (1).pdf** — Full evaluation report with detailed methodology and findings
-- **NHGSFP_Executive_Summary_Final.pdf** — Executive summary for quick reference
+- **Full Brief (22 pages)** — complete evaluation with methodology, four findings, five recommendations, limitations, and methodological caveats. Read this if you want the full argument.
+- **Executive Summary (7 pages)** — the M&E-style condensed version. Read this if you have 10 minutes and want the spine of the analysis.
+- **LinkedIn Dashboard (9 pages)** — the visual-first carousel with big typography, suited for phone scrolling and document-post sharing.
 
-**[📖 View Reading and Summary documentation](./HGSF%20Reading%20and%20Summary/About%20Documentations.md)**
+**[📖 View Reading and Summary documentation →](https://github.com/Almuarif17/social-protection-me-nigeria/blob/main/Brief%2003_HGSF/HGSF%20Reading%20and%20Summary/About%20Documentations.md)**
 
-### 🔬 **R and Data Analysis** — Technical Analysis
-Contains the reproducible analysis pipeline:
-- **HGSF_Brief3_Analysis.qmd** — Quarto R script with complete analysis workflow
-- **Feeding the Bet — HGSF Brief 3 Analysis.pdf** — Rendered analysis output
-- **HGSF_ME_Review_Structured_Extraction_Table.pdf** — Data extraction and summary tables
-- **verified_numbers.md** — Validated key figures and statistics
+### 📊 [IMAGES](https://github.com/Almuarif17/social-protection-me-nigeria/tree/main/Brief%2003_HGSF/IMAGES) — Publication-quality charts
 
-**[📖 View Analysis documentation](./R%20and%20Data%20Analysis/Note%20on%20Analysis.md)**
+Five standalone PNG charts at 300 DPI, ready for citation, reuse, or republication under CC-BY:
 
----
+- `01_budget_trend.png` — Annual federal allocation, 2018–2023
+- `02_reach_trend.png` — Federal pupil-reach claims, 2017–2025 (peak, suspension, pilot relaunch)
+- `03_cost_per_meal.png` — Where ₦70 actually goes (food vs. overhead breakdown)
+- `03b_real_value_70_deflated.png` — Real-terms purchasing power of ₦70/meal, NBS Food CPI deflated, 2016–2025
+- `04_fraud_recovery.png` — Documented fraud incidents vs. NSIPA recovery action, log scale, 2019–2025
 
-## Quick Start by Use Case
+**[📖 View IMAGES documentation →](https://github.com/Almuarif17/social-protection-me-nigeria/blob/main/Brief%2003_HGSF/IMAGES/Image%20Note.md)**
 
-### For Decision-Makers & Policy Stakeholders
-1. Start with: **NHGSFP_Executive_Summary_Final.pdf**
-2. Review: **IMAGES folder** for key trends
-3. Reference: **verified_numbers.md** for specific statistics
+### 🔬 [R and Data Analysis](https://github.com/Almuarif17/social-protection-me-nigeria/tree/main/Brief%2003_HGSF/R%20and%20Data%20Analysis) — Reproducible analytical pipeline
 
-### For Researchers & Analysts
-1. Read: **Evaluated_Home_Grown_School_Feeding_Programme (1).pdf** for methodology
-2. Review: **HGSF_Brief3_Analysis.qmd** for reproducible analysis code
-3. Check: **HGSF_ME_Review_Structured_Extraction_Table.pdf** for data structure
+The full technical layer. Anyone with R + Quarto + tidyverse can clone this repository and re-render every chart and every page from source:
 
-### For Reproducibility
-1. Navigate to: **R and Data Analysis** folder
-2. Review: **Note on Analysis.md** for instructions
-3. Execute: `quarto render HGSF_Brief3_Analysis.qmd` to regenerate outputs
+- `HGSF_Brief3_Analysis.qmd` — the Quarto source file (analysis + prose in one)
+- `Feeding the Bet — HGSF Brief 3 Analysis.pdf` — the rendered analytical output
+- `HGSF_ME_Review_Structured_Extraction_Table.pdf` — the full 34-source extraction matrix with author, date, source type, URL, programme element, indicators, quantitative findings, qualitative themes, and gap assessment per row
+- Five source CSVs — `hgsf_budget_series.csv`, `hgsf_reach_claims.csv`, `hgsf_cost_per_meal.csv`, `hgsf_real_value_70naira.csv`, `hgsf_fraud_timeline.csv`
+
+**[📖 View analysis documentation →](https://github.com/Almuarif17/social-protection-me-nigeria/blob/main/Brief%2003_HGSF/R%20and%20Data%20Analysis/Note%20on%20Analysis.md)**
 
 ---
 
-## Methodology
+## Headline findings
 
-This brief combines:
-- **Desk review** of public programme documents and reports
-- **Primary data analysis** where datasets are publicly available
-- **Structured data extraction** into standardized M&E tables
-- **Cross-validation** of figures across multiple sources
-- **R/Quarto reproducible analysis** for transparency and verifiability
+**Finding 1 — The budget arithmetic that does not reconcile.** Component years disclosed (₦63.2bn + ₦32.2bn + ₦124.4bn) sum to ₦219.8bn, not the stated cumulative ₦186bn. A ₦33.8 billion discrepancy has never been publicly reconciled. Only ₦64bn of the ₦186bn reached direct feeding.
 
-All analysis is transparent, documented, and reproducible through the scripts and tables in the R and Data Analysis folder.
+**Finding 2 — The ₦70 question.** The unit cost was set at ₦70 in 2016 and held there until the 2024 suspension. The ₦100 rate approved in 2022 was never implemented. NBS Food CPI–deflated, ₦70 in 2025 retains the food-purchasing power of approximately ₦11 in 2016 terms — less than one-sixth of its launch value.
 
----
+**Finding 3 — Three orders of magnitude.** Documented fraud incidents (₦40m + ₦68m Kogi 2019; ₦2.67bn COVID-period allegation 2020) are dwarfed by the ₦30 billion+ NSIPA recovery action of December 2025.
 
-## Key Findings Overview
-
-### Budget Analysis
-See: **01_budget_trend.png**
-
-### Programme Reach
-See: **02_reach_trend.png**
-
-### Cost Efficiency
-See: **03_cost_per_meal.png** and **03b_real_value_70_deflated.png** (inflation-adjusted)
-
-### Governance & Accountability
-See: **04_fraud_recovery.png**
+**Finding 4 — The measurement blind spot.** No public NHGSFP dashboard exists. No quarterly state-level delivery record has been published since 2020. WFP School Meals Coalition (2023) records 10 million pupils receiving meals; the World Bank / NASSCO (2025) review states the programme has not delivered benefits since 2023. Two reputable bodies, the same year, irreconcilable on the basic question of whether the programme exists.
 
 ---
 
-## Reproducibility & Transparency
+## Five recommendations
 
-Where primary data is used, this folder contains:
-- ✅ Complete analytical pipeline (Quarto script)
-- ✅ Variable lists and data documentation
-- ✅ Cleaned outputs and processed datasets
-- ✅ Chart-generating code
-- ✅ Methodology documentation
-
-All figures in **verified_numbers.md** have been cross-checked against source data.
+1. **Public quarterly dashboard** — NSIPA + FME, feasible in 90 days, no legislation required.
+2. **Independent verification budget line** — ≥1% of NHGSFP annual budget for accredited CSO verification, 2027 appropriation.
+3. **Biometric cook registry** — NIN-anchored, NSIPA + NIMC, pilot 10,000 cooks across 2 states within 180 days.
+4. **Automatic unit-cost review trigger** — legislated, NBS Food CPI ≥25% movement compels rate review within 60 days; include in the 2026 Finance Act.
+5. **State co-financing readiness audit** — NSIPA + State MoEs, scores published for 12 pilot states within 6 months.
 
 ---
 
-## Folder Structure
+## Methodological note
 
-```
-Brief 03_HGSF/
-├── README.md ← you are here
-│
-├── IMAGES/
-│   ├── 01_budget_trend.png
-│   ├── 02_reach_trend.png
-│   ├── 03_cost_per_meal.png
-│   ├── 03b_real_value_70_deflated.png
-│   ├── 04_fraud_recovery.png
-│   └── Image Note.md
-│
-├── HGSF Reading and Summary/
-│   ├── Evaluated_Home_Grown_School_Feeding_Programme (1).pdf
-│   ├── NHGSFP_Executive_Summary_Final.pdf
-│   └── About Documentations.md
-│
-└── R and Data Analysis/
-    ├── HGSF_Brief3_Analysis.qmd
-    ├── Feeding the Bet — HGSF Brief 3 Analysis.pdf
-    ├── HGSF_ME_Review_Structured_Extraction_Table.pdf
-    ├── verified_numbers.md
-    └── Note on Analysis.md
-```
+Secondary analysis of 34 publicly available sources. No primary fieldwork. Where sources conflict, contradictions are named rather than resolved. Inflation deflation uses NBS Food CPI annual averages indexed to 2016. Currency conversion for WFP figures uses the CBN 2023 annual average rate of approximately ₦750/$. Readers seeking primary data are directed to the CGIAR/IFPRI Osun State baseline study and the ANEEJ/NSIO Social Protection Baseline Report.
 
 ---
 
 ## Citation
 
-If you cite this brief, please use:
-
-> Mashood, U. A. (2026). *Feeding the Bet: An Independent Monitoring & Evaluation Review of Nigeria's Home Grown School Feeding Programme.* Social Protection M&E — Nigeria series, Brief 3. Available at: https://github.com/Almuarif17/social-protection-me-nigeria/tree/main/Brief%2003_HGSF
+> Mashood, U. A. (2026). *Feeding the Bet: An Independent M&E Review of Nigeria's Home-Grown School Feeding Programme, 2016–2025.* Brief 3 of the Independent M&E Reviews of Nigerian Social Investment Programmes. GitHub: github.com/Almuarif17/social-protection-me-nigeria.
 
 ---
 
-## License
+## Licence
 
-All materials in this folder are released under the Creative Commons Attribution 4.0 International License (CC BY 4.0). You are free to use, share, adapt, and build upon these materials with attribution.
-
----
-
-## Questions or Feedback?
-
-For questions about:
-- **The analysis methodology** → Review the Quarto script in R and Data Analysis
-- **Specific findings** → Check verified_numbers.md
-- **Data sources** → See citations in the main evaluation PDF
-- **Using the materials** → This README and the three folder-level documentation files (Image Note.md, About Documentations.md, Note on Analysis.md)
+Content is shared under Creative Commons Attribution 4.0 International (CC-BY 4.0).
 
 ---
 
-**Back to main repository:** [Social Protection M&E — Nigeria](https://github.com/Almuarif17/social-protection-me-nigeria)
+## Contact
+
+Usman Almuarif Mashood · Independent M&E Researcher · usmanmashoodalmuarif@gmail.com · [linkedin.com/in/almuarifusman](https://linkedin.com/in/almuarifusman)
