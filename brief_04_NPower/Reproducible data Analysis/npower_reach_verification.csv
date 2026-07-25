@@ -1,0 +1,7 @@
+batch_strand,official_claim,verified_low,verified_high,verification_status,ghost_flag,adverse_note,sources
+Batch A (2016),200000,182000,200000,Consistent across official + press records (not audited),Y,"Ghost overlay applied","N-Power Info Guide 2017; Premium Times 2019; Osimen et al. 2025"
+Batch B (2017/18),300000,273000,300000,Broadly corroborated (not audited),Y,"Ghost overlay applied","N-Power Info Guide 2017; Punch 2020"
+Batch C Stream 1 (2020),510000,0,510000,Inauguration reported; full deployment unverified,Y,"Beneficiaries owed stipends into 2026","Premium Times 2019; TheCable 2019/2021; FIJ 2024; ANEEJ 2025"
+Batch C Stream 2 (2020),490000,0,0,No completion record found,N,"₦108bn arrears to 400000 beneficiaries (Jul 2024)","TheCable 2019/2021; Punch 2020; FIJ 2024; ANEEJ 2025"
+N-Teach (cumulative),900000,0,0,None independent,N,"Federal claim only","NSIPA 2026"
+N-Health (cumulative),150000,0,0,None independent,N,"Federal claim only","NSIPA 2026"
