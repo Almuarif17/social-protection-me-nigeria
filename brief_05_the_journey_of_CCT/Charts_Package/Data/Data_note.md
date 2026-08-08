@@ -1,1 +1,0 @@
-## About data for charts
