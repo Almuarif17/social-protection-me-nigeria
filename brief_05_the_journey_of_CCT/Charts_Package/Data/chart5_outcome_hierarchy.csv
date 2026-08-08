@@ -1,0 +1,5 @@
+outcome_domain,evidence_strength_score,effect_size_range,replication_frequency,nigeria_targets_this,note
+Education access,4,"+7% to +43% enrollment gain","9 of 9 programmes measured found positive",yes,"Largest and most consistent effects. Conditionality earns its cost."
+Health utilisation,3,"+18% clinic visits; significant institutional delivery gains","6 of 6 programmes measured found positive",yes,"Strong for discrete behaviours (immunisation, delivery). Requires functional supply."
+Nutrition,2,"Dietary diversity improved; stunting 5 of 13, wasting 1 of 5, underweight 1 of 8",partial,partial,"Dietary diversity improves. Anthropometric outcomes do not move without complementary interventions."
+Economic empowerment,1,"Consumption increases; sustained employment or exit from poverty not demonstrated by cash alone",weak,no,"Weakest domain. Requires cash-plus-complementary (graduation programmes) to demonstrate poverty exit."

@@ -1,0 +1,11 @@
+programme,country,transfer_usd_month,pct_consumption,note
+Progresa,Mexico,65,25,"Average USD 40 to 90 per household per month"
+Bolsa Familia,Brazil,38,22,"2015 average, per household per month"
+PKH,Indonesia,40,20,"USD 30 to 50 per household per month"
+4Ps,Philippines,38,7,"USD 30 to 45 per household per month; 6 to 8 percent of consumption"
+CT-OVC,Kenya,20,20,"Roughly 20 percent of beneficiary consumption; maintained real value"
+LEAP,Ghana,12,13,"Median 13 percent of consumption; eroded from USD 12 to USD 5 to 9 by 2016"
+PSSN,Tanzania,18,15,"USD 10 to 25 per household per month; approximately 15 percent of consumption"
+COPE,Nigeria,17,15,"USD 10 to 25 nominal (2007 to 2015); pilot never scaled"
+NASSP-HUP,Nigeria,12.17,7,"NGN 5000 at appraisal (2016); 6 to 7 percent of consumption"
+NASSP-HUP real 2026,Nigeria,3.5,2.5,"NGN 5000 flat, real value collapsed by NBS food CPI"
