@@ -64,6 +64,17 @@ An independent M&E review of Nigeria's flagship graduate employment programme ac
 
 Method: secondary analysis with NBS Food CPI–deflated stipend erosion, denominator-sensitive ghost-name adjustment (9–18% band), and Theory of Change measurement coverage audit. No primary fieldwork.
 
+### Brief 5, The Journey of an Instrument (Conditional Cash Transfer, 1997 to 2026)
+
+An independent M&E review of the Conditional Cash Transfer paradigm itself. Where it came from, how it worked in the countries that adopted it, and what its record in Nigeria means for its future here. The brief traces the instrument from its Southern origins (Honduras 1990, Bangladesh 1994, Brazil 1995) through Mexican and Brazilian consolidation, Latin American diffusion, Asian adoption, and African adaptation, into Nigeria's COPE (2007) and NASSP-HUP (2016 to present). Answers directly: is cash transfer a sound national response to poverty, and for what specific objectives does it actually work or not? Built from a curated 26-source evidence matrix and closes with seven recommendations for Nigeria's cash transfer architecture.
+
+- 📄 [Read the full brief (PDF)](brief_05_the_journey_of_CCT/Brief%20Reading%20Documents/Brief_05_The%20Jourey_of_CCT.pdf)
+- 📄 [Read the executive summary (PDF)](brief_05_the_journey_of_CCT/Brief%20Reading%20Documents/Brief5_Executive_Summary.pdf)
+- 📁 [Folder contents](brief_05_the_journey_of_CCT)
+- 🔬 [Reproducible analysis (Python notebook + CSVs)](brief_05_the_journey_of_CCT/Charts_Package)
+
+Method: chronological country-genealogy synthesis (umbrella review) across sixteen comparator programmes, with the four conditions for CCT effectiveness applied to Nigeria's record. No primary fieldwork.
+
 ---
 
 ## How to use this repository
